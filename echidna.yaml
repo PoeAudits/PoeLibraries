@@ -1,0 +1,23 @@
+# testMode: "assertion"
+workers: 5
+coverage: true
+stopOnFail: true
+# don't allow fuzzer to use all functions
+# since we are using handlers
+allContracts: false
+maxTimeDelay: 86400
+maxBlockDelay: 8640
+
+# record fuzzer coverage to see what parts of the code
+# fuzzer executes
+corpusDir: "echidna/coverage-echidna"
+
+allContracts: false
+
+# prefix of invariant function
+prefix: "property_"
+codeSize: 0xffffff
+
+# instruct foundry to compile tests
+cryticArgs: ["--foundry-compile-all"]
+
